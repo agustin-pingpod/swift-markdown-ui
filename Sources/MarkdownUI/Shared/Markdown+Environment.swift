@@ -17,7 +17,7 @@
     }
 
     @available(macOS 10.15, iOS 13.0, tvOS 13.0, *)
-    extension EnvironmentValues {
+    public extension EnvironmentValues {
         var markdownBaseURL: URL? {
             get { self[MarkdownBaseURLKey.self] }
             set { self[MarkdownBaseURLKey.self] = newValue }
