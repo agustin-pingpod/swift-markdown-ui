@@ -15,11 +15,11 @@ public struct DefaultMarkdownStyle: MarkdownStyle {
     public typealias Font = MarkdownStyle.Font
     public typealias Color = MarkdownStyle.Color
 
-    public let font: Font
-    public let foregroundColor: Color
-    public let codeFontName: String?
-    public let codeFontSizeMultiple: CGFloat
-    public let headingFontSizeMultiples: [CGFloat]
+    public var font: Font
+    public var foregroundColor: Color
+    public var codeFontName: String?
+    public var codeFontSizeMultiple: CGFloat
+    public var headingFontSizeMultiples: [CGFloat]
 
     public init(
         font: Font,
