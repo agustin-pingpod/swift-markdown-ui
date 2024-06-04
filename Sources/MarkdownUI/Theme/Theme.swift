@@ -162,6 +162,9 @@ public struct Theme {
   /// The paragraph style.
   public var paragraph = BlockStyle<BlockConfiguration> { $0.label }
 
+  /// The HTML block style
+  public var html = BlockStyle<BlockConfiguration> { $0.label }
+
   /// The blockquote style.
   public var blockquote = BlockStyle<BlockConfiguration> { $0.label }
 
@@ -317,6 +320,16 @@ extension Theme {
   ) -> Theme {
     var theme = self
     theme.paragraph = .init(body: body)
+    return theme
+  }
+
+  /// Adds an HTML block style to the theme.
+  /// - Parameter body: A view builder that returns a customized html block.
+  public func html<Body: View>(
+    @ViewBuilder body: @escaping (_ label: BlockConfiguration) -> Body
+  ) -> Theme {
+    var theme = self
+    theme.html = .init(body: body)
     return theme
   }
 

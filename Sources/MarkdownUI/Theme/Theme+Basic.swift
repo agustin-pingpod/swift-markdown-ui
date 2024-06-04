@@ -73,6 +73,12 @@ extension Theme {
         .relativeLineSpacing(.em(0.15))
         .markdownMargin(top: .zero, bottom: .em(1))
     }
+    .html { configuration in
+      configuration.label
+        .fixedSize(horizontal: false, vertical: true)
+        .relativeLineSpacing(.em(0.15))
+        .markdownMargin(top: .zero, bottom: .em(1))
+    }
     .blockquote { configuration in
       configuration.label
         .markdownTextStyle {

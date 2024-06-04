@@ -54,6 +54,13 @@ struct ContentView: View {
           } label: {
             Label("Tables", systemImage: "tablecells")
           }
+          NavigationLink {
+            HTMLView()
+              .navigationTitle("HTML")
+              .navigationBarTitleDisplayMode(.inline)
+          } label: {
+            Label("HTML", systemImage: "globe")
+          }
         }
         Section("Extensibility") {
           NavigationLink {

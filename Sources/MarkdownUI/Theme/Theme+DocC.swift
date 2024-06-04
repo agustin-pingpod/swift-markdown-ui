@@ -79,6 +79,12 @@ extension Theme {
         .relativeLineSpacing(.em(0.235295))
         .markdownMargin(top: .em(0.8), bottom: .zero)
     }
+    .html { configuration in
+      configuration.label
+        .fixedSize(horizontal: false, vertical: true)
+        .relativeLineSpacing(.em(0.235295))
+        .markdownMargin(top: .em(0.8), bottom: .zero)
+    }
     .blockquote { configuration in
       configuration.label
         .relativePadding(length: .rem(0.94118))
